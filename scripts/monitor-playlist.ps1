@@ -13,7 +13,9 @@ $AttributeFilter = [IO.NotifyFilters]::FileName, [IO.NotifyFilters]::LastWrite
 
 try
 {
-  $watcher = New-Object -TypeName System.IO.FileSystemWatcher -Property @{
+Start-Process "G:\scripts\vlc.bat"
+ 
+ $watcher = New-Object -TypeName System.IO.FileSystemWatcher -Property @{
     Path = $Path
     Filter = $FileFilter
     IncludeSubdirectories = $IncludeSubfolders
